@@ -217,13 +217,12 @@ The installer validates module names but will continue even if the format is non
 To rebuild the installer after making changes:
 
 ```bash
-cd install
-go build -o install
+go build -o webcore-go-install install.go
 ```
 
 ## License
 
-This installer is part of the WebCore Go Template project.
+This installer is part of the WebCore Go Template project and is licensed under the Apache License 2.0.
 
 ## Support
 
