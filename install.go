@@ -638,12 +638,14 @@ func commentConfigSections(configPath string, libraries []LibraryOption) error {
 	// Check which libraries are selected
 	hasDatabase := hasLibraryPrefix(libraries, "database:")
 	hasRedis := hasLibraryName(libraries, "redis")
+	hasKafka := hasLibraryName(libraries, "kafka:")
 	hasPubsub := hasLibraryName(libraries, "pubsub")
 
 	// Comment out sections if corresponding library is not selected
 	lines = commentSection(lines, 71, 92, !hasDatabase) // database section
 	lines = commentSection(lines, 94, 104, !hasRedis)   // redis section
-	lines = commentSection(lines, 107, 114, !hasPubsub) // pubsub section
+	lines = commentSection(lines, 106, 112, !hasKafka)  // kafka section
+	lines = commentSection(lines, 115, 122, !hasPubsub) // pubsub section
 
 	newContent := strings.Join(lines, "\n")
 	return os.WriteFile(configPath, []byte(newContent), 0644)
