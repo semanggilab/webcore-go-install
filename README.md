@@ -20,6 +20,35 @@ A command-line installer that helps you set up a new WebCore Go project from a t
 
 ## Installation
 
+### Via go install (Recommended)
+
+With Go 1.25 or higher:
+
+```bash
+go install github.com/semanggilab/webcore-go-install@latest
+```
+
+This will install the installer to your Go bin directory (`$GOPATH/bin` or `$HOME/go/bin`), and you can run it from anywhere:
+
+```bash
+cd /path/to/your/project
+install
+```
+
+### Via go get -tool (Project Install)
+
+With Go 1.24 or higher:
+
+```bash
+go get -tool github.com/semanggilab/webcore-go-install@latest
+```
+
+Then use it like so:
+
+```bash
+go tool install -v
+```
+
 ### Build from Source
 
 ```bash
