@@ -31,7 +31,6 @@ go install github.com/semanggilab/webcore-go-install@latest
 This will install the installer to your Go bin directory (`$GOPATH/bin` or `$HOME/go/bin`), and you can run it from anywhere:
 
 ```bash
-cd /path/to/your/project
 webcore-go-install
 ```
 
@@ -60,7 +59,6 @@ The `webcore-go-install` binary will be created in the source directory.
 Run the installer from the project root directory:
 
 ```bash
-cd /path/to/your/project
 ./<path-to-installer-directory>/webcore-go-install
 ```
 
