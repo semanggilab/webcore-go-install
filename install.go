@@ -84,20 +84,20 @@ var availableLibraries = []LibraryOption{
 	{
 		Name:        "authstorage:yaml",
 		Description: "Authentication Storage: YAML",
-		PackagePath: "github.com/webcore-go/webcore/lib/authstore/yaml",
+		PackagePath: "github.com/webcore-go/webcore/adapter/authstore/yaml",
 		Enabled:     true,
 	},
 	{
 		Name:        "authentication:apikey",
 		Description: "Authentication: API key",
-		PackagePath: "github.com/webcore-go/webcore/lib/auth/apikey",
+		PackagePath: "github.com/webcore-go/webcore/adapter/auth/apikey",
 		LoaderName:  "ApiKeyLoader",
 		Enabled:     true,
 	},
 	{
 		Name:        "authentication:basic",
 		Description: "Authentication: Basic",
-		PackagePath: "github.com/webcore-go/webcore/lib/auth/basic",
+		PackagePath: "github.com/webcore-go/webcore/adapter/auth/basic",
 		LoaderName:  "BasicAuthLoader",
 		Enabled:     false,
 	},
